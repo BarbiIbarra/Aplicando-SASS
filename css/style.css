@@ -1,0 +1,140 @@
+@charset "UTF-8";
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box; }
+
+/*ENCABEZADO*/
+header {
+  background-color: #dcdcdc;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  font-family: 'Arimo', sans-serif; }
+
+/*FOOTER*/
+footer .footer {
+  background-color: gainsboro;
+  padding: 15px;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-evenly;
+  align-items: center; }
+
+footer .footer div img {
+  height: 80px; }
+
+footer .footerInfo {
+  font-family: 'Arimo', sans-serif;
+  font-size: 15px; }
+
+footer .footerDerechos {
+  background-color: #E9E8E5;
+  padding: 15px; }
+
+footer .footerDerechos div h4 {
+  font-family: 'Arimo', sans-serif;
+  line-height: 1;
+  font-size: 13px;
+  text-align: center; }
+
+/*ACTIVIDADES*/
+main .hacer p {
+  background-color: #E9E8E5;
+  padding: 20px;
+  font-family: 'Arimo', sans-serif;
+  text-align: justify;
+  line-height: 1.5;
+  font-size: 17px; }
+
+main .trekking {
+  background-color: #E9E8E5;
+  font-family: 'Arimo', sans-serif;
+  font-size: 17px;
+  text-align: center;
+  padding: 20px; }
+
+main .trekking h4 {
+  font-size: 35px;
+  color: #1f5b37; }
+
+main .trekking div {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+  gap: 20px; }
+
+main .trekkingTamaño {
+  width: 350px;
+  height: 250px;
+  padding: 5px; }
+
+main .botonCaminatas {
+  background-color: #1f5b37;
+  padding: 10px;
+  margin: 20px;
+  width: 350px;
+  border: 1px solid black;
+  border-radius: 80px;
+  margin-right: auto;
+  margin-left: auto;
+  display: flex;
+  justify-content: center; }
+
+main .botonCaminatas a {
+  font-family: 'Arimo', sans-serif;
+  text-decoration: none;
+  color: #EEEDEA;
+  font-size: 14px;
+  display: flex; }
+
+main .botonCaminatas:hover {
+  background-color: gainsboro;
+  font-weight: 600; }
+
+main .botonCaminatas a:hover {
+  color: #1f5b37; }
+
+main .excursiones {
+  background-color: #EEEDEA;
+  font-family: 'Arimo', sans-serif;
+  font-size: 17px;
+  text-align: center;
+  padding: 20px; }
+
+main .excursiones h4 {
+  font-size: 35px;
+  color: #1f5b37; }
+
+main .excursiones div {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+  gap: 20px; }
+
+main .excursionesTamaño {
+  width: 350px;
+  height: 250px;
+  padding: 5px; }
+
+main .automovil {
+  background-color: #E9E8E5;
+  font-family: 'Arimo', sans-serif;
+  font-size: 17px;
+  text-align: center;
+  padding: 20px; }
+
+main .automovil h4 {
+  font-size: 35px;
+  color: #1f5b37; }
+
+main .automovil div {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+  gap: 20px; }
+
+main .automovilTamaño {
+  width: 350px;
+  height: 250px;
+  padding: 5px; }

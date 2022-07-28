@@ -1,0 +1,144 @@
+@import "scss/variables";
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+/*ENCABEZADO*/
+
+header{
+    background-color: #dcdcdc;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;    
+    font-family:'Arimo', sans-serif;
+}
+
+/*FOOTER*/
+footer{
+    .footer{
+    background-color: gainsboro ;
+    padding: 15px;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-evenly;
+    align-items: center;
+    }
+    .footer div img{
+    height: 80px;
+    }
+    .footerInfo{
+    font-family: 'Arimo', sans-serif; 
+    font-size: 15px; 
+    }
+    .footerDerechos{
+    background-color: $color-gris;
+    padding: 15px;
+    }
+    .footerDerechos div h4{
+        font-family: 'Arimo', sans-serif;
+        line-height: 1;
+        font-size: 13px;
+        text-align: center;
+    }    
+}
+
+/*ACTIVIDADES*/
+main{
+    .hacer p{
+        background-color: $color-gris;
+        padding: 20px;
+        font-family:'Arimo', sans-serif;
+        text-align: justify;
+        line-height: 1.5;
+        font-size: 17px; 
+    }
+    .trekking{
+        background-color: $color-gris;
+        font-family: 'Arimo', sans-serif;
+        font-size: 17px;
+        text-align: center;
+        padding: 20px;
+    }
+    .trekking h4{
+        font-size: 35px;
+        color: $color-verde;
+    } 
+    .trekking div{
+        @include actividades-responsive;
+        gap: 20px;
+    }
+    .trekkingTamaño{
+        @include medidas-imagenes (350px, 250px, 5px); 
+    }
+    .botonCaminatas{
+        background-color: $color-verde;
+        padding: 10px;
+        margin: 20px;
+        width: 350px;
+        border: 1px solid black;
+        border-radius: 80px;
+        margin-right: auto;
+        margin-left: auto;    
+        display: flex;
+        justify-content: center;
+    }
+    .botonCaminatas a{
+        font-family: 'Arimo', sans-serif;
+        text-decoration: none;
+        color: $color-crema;
+        font-size: 14px;
+        display: flex;
+    }
+    .botonCaminatas:hover{
+        background-color: gainsboro;  
+        font-weight: 600;    
+    }
+    .botonCaminatas a:hover{
+        color: $color-verde;
+    }
+    .excursiones{
+        background-color: $color-crema;
+        font-family: 'Arimo', sans-serif;
+        font-size: 17px;
+        text-align: center;
+        padding: 20px;
+    }
+    
+    .excursiones h4{
+        font-size: 35px;
+        color: $color-verde;
+    }
+    
+    .excursiones div{
+        @include actividades-responsive;
+        gap: 20px;
+    }
+    
+    .excursionesTamaño{
+        @include medidas-imagenes (350px, 250px, 5px); 
+    }
+    .automovil{
+        background-color: $color-gris;
+        font-family:'Arimo', sans-serif;
+        font-size: 17px;
+        text-align: center;
+        padding: 20px;
+    }
+    
+    .automovil h4{
+        font-size: 35px;
+        color: $color-verde;
+    }
+    
+    .automovil div{
+        @include actividades-responsive;
+        gap: 20px;
+    }
+    
+    .automovilTamaño{
+        @include medidas-imagenes (350px, 250px, 5px); 
+    }  
+}
+
