@@ -44,13 +44,194 @@ footer{
     }    
 }
 
+
+/*inicio*/
+main{
+    .probando{
+        display: flex;
+        justify-content: center;
+    }    
+    .imagenBienvenido{
+        width: 100%;
+    }    
+    .bienvenido{
+        background-color: $color-gris;
+        @include textos;
+        font-size: 17px;
+        line-height: 1.5;
+        padding: 30px;
+    }    
+    .bienvenido h1{
+        font-family: 'Arimo', sans-serif;
+        color: $color-verde;
+        font-size: 50px;
+    }    
+    .noticia h2{
+        @include textos;
+        line-height: 1.5;
+        font-size: 35px;
+    }      
+    .informacion{
+        background-color: $color-crema;
+        padding: 20px;
+    }    
+    .informacionClick{
+        padding: 20px;
+        @include flex-around;
+    }    
+    .informacionClick img{
+        height: 250px;
+        width: 350px;
+        gap: 20px;
+        margin: 30px;
+    }    
+    .informacionClick img:hover{
+        transform: scale(1.1);
+    }    
+    .informacionIcon{
+        padding: 20px;
+        margin: 10px;
+        @include flex-around;
+    }    
+    .informacionIcon img{
+        width: 130px;
+        gap: 50px;
+    }    
+    .informacionIcon img:hover{
+        transform: scale(1.3);
+        background-color: gainsboro;
+        padding: 18px;
+        border-radius: 30px;    
+    }    
+    .noticia{
+        background-color: $color-gris;
+        @include textos;
+        line-height: 1.5;
+        padding: 30px 50px;
+
+    }
+    .madre-contenedor{
+        padding: 20px;
+        @include grid-center;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
+        grid-template-areas: "noticia-1 noticia-2"
+                             "noticia-3 noticia-4"
+                             "noticia-5 noticia-6";
+        @include flex-center;
+        gap: 15px;
+    }
+    .noticia-1{
+        @include medidas-noticia(500px, 110px);
+        grid-area: noticia-1;
+    }
+    .noticia-1:hover{
+        transform: scale(1.03);
+    }    
+    .noticia-2{
+        @include medidas-noticia(500px, 110px);
+        grid-area: noticia-2;
+    }
+    .noticia-2:hover{
+        transform: scale(1.03);
+    }    
+    .noticia-3{
+        @include medidas-noticia(500px, 110px);
+        grid-area: noticia-3;
+    }
+    .noticia-3:hover{
+        transform: scale(1.03);
+    }    
+    .noticia-4{
+        @include medidas-noticia(500px, 110px);
+        grid-area: noticia-4;
+    }
+    .noticia-4:hover{
+        transform: scale(1.03);
+    }    
+    .noticia-5{
+        @include medidas-noticia(500px, 110px);
+        grid-area: noticia-5;
+    }
+    .noticia-5:hover{
+        transform: scale(1.03);
+    }    
+    .noticia-6{
+        @include medidas-noticia(500px, 110px);
+        grid-area: noticia-6;
+    }
+    .noticia-6:hover{
+        transform: scale(1.03);
+    }
+}
+
+/*INFORMACION*/
+main{
+    .frecuentes{
+        background-color: $color-crema;
+        @include textos;
+        font-size: 17px;
+        line-height: 1.5;
+        padding: 30px;
+    }    
+    .frecuentes h2{
+        color: $color-verde;
+        font-size: 35px;
+        text-align: center;
+    }
+    .frecuentes p{
+        text-align: center;
+        background-color: er;
+    }   
+    .preguntasFrecuentes{
+        padding: 50px;
+        background-color: gainsboro;
+        @include flex-center;
+        flex-direction: column;
+    }    
+    .preguntasFrecuentes button{
+        font-family:'Arimo', sans-serif;
+        font-size: 17px;
+        color: black;
+        background-color: $color-naranja;
+        width: 100%;
+        @include flex-center;
+        align-items: center;
+    }
+    .preguntasMenu{
+        text-align: justify;
+    }    
+    .mapas{
+        background-color: $color-gris;
+        padding: 20px;
+    
+    }    
+    .mapas h4{
+        font-size: 35px;
+        color: $color-verde;
+        padding: 10px;
+        font-family:'Arimo', sans-serif;
+        text-align: center;
+    }    
+    .mapas div{
+        padding: 10px;
+        gap: 30px;
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: space-evenly;
+    }    
+    .mapasTamaño{
+        height: 300px;
+        width: 250px;
+    }    
+}
+
 /*ACTIVIDADES*/
 main{
     .hacer p{
         background-color: $color-gris;
         padding: 20px;
-        font-family:'Arimo', sans-serif;
-        text-align: justify;
+        @include textos;
         line-height: 1.5;
         font-size: 17px; 
     }
@@ -66,7 +247,7 @@ main{
         color: $color-verde;
     } 
     .trekking div{
-        @include actividades-responsive;
+        @include flex-around;
         gap: 20px;
     }
     .trekkingTamaño{
@@ -104,18 +285,15 @@ main{
         font-size: 17px;
         text-align: center;
         padding: 20px;
-    }
-    
+    }    
     .excursiones h4{
         font-size: 35px;
         color: $color-verde;
-    }
-    
+    }    
     .excursiones div{
-        @include actividades-responsive;
+        @include flex-around;
         gap: 20px;
     }
-    
     .excursionesTamaño{
         @include medidas-imagenes (350px, 250px, 5px); 
     }
@@ -126,19 +304,483 @@ main{
         text-align: center;
         padding: 20px;
     }
-    
     .automovil h4{
         font-size: 35px;
         color: $color-verde;
     }
-    
     .automovil div{
-        @include actividades-responsive;
+        @include flex-around;
         gap: 20px;
     }
-    
     .automovilTamaño{
         @include medidas-imagenes (350px, 250px, 5px); 
     }  
 }
 
+/*ACTIVIDADES-CAMINATAS*/
+MAIN{
+    .caminataAuto{
+        background-color: $color-crema;
+        font-family: 'Arimo', sans-serif;
+        font-size: 25px;
+        color: $color-verde;
+        padding: 30px;
+        text-align: center;
+    }
+    .autoguiadas{
+        background-color: $color-crema;   
+        @include grid-center;
+        grid-template-columns: auto auto;
+        grid-template-rows: 2fr 2fr 2fr;
+        grid-template-areas: "imagen1 texto1 "
+                             "imagen2 imagen3"
+                             "texto2 imagen4";
+    }
+    .imagen1{
+        grid-area: imagen1;
+        height: 80%;
+        width: 80%;
+        animation-name: imagen1;
+        animation-iteration-count: infinite;
+        animation-duration: 15s;
+        animation-timing-function: linear;
+    }
+    
+    @keyframes imagen1{
+        from{
+            transform: scale(1);
+        }
+        to{
+            transform: scale(1.1);
+        }
+    }
+    .texto1{
+        grid-area: texto1;
+        padding: 50px;
+        text-align: start;
+        font-family: 'Arimo', sans-serif;
+        line-height: 1.5;
+        font-size: 17px;
+    }
+    
+    .imagen2{
+        grid-area: imagen2;
+        height: 80%;
+        width: 80%;
+        animation-name: imagen2;
+        animation-iteration-count: infinite;
+        animation-duration: 15s;
+        animation-timing-function: linear;
+    }
+    @keyframes imagen2{
+        from{
+            transform: scale(1);
+        }
+        to{
+            transform: scale(1.1);
+        }
+    }
+    .imagen3{
+        grid-area: imagen3;
+        height: 80%;
+        width: 80%;
+        animation-name: imagen3;
+        animation-iteration-count: infinite;
+        animation-duration: 15s;
+        animation-timing-function: linear;
+    }
+    
+    @keyframes imagen3{
+        from{
+            transform: scale(1);
+        }
+        to{
+            transform: scale(1.1);
+        }
+    }
+    .texto2{
+        grid-area: texto2;
+        padding: 50px;
+        text-align: end;
+        font-family: 'Arimo', sans-serif;
+        line-height: 1.5;
+        font-size: 17px;
+    }     
+    .imagen4{
+        grid-area: imagen4;
+        height: 80%;
+        width: 80%;
+        animation-name: imagen4;
+        animation-iteration-count: infinite;
+        animation-duration: 15s;
+        animation-timing-function: linear;
+    }    
+    @keyframes imagen4{
+        from{
+            transform: scale(1);
+        }
+        to{
+            transform: scale(1.1);
+        }
+    }    
+    .videoCaminata{
+        background-color: $color-gris;
+        padding: 20px;
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: center;
+    }    
+    .videoCaminata iframe{
+        width: 700px;
+        height: 400px;
+    }
+    
+}
+
+/*SERVICIOS*/
+MAIN{
+    .disfrutar{
+        background-color: $color-crema;
+        @include textos;
+        font-size: 17px;
+        line-height: 1.5;
+        padding: 30px;
+    }
+    .distrutarImagen{
+        background-color: $color-gris;
+        height: 430px;
+        width: 1349px;
+    }
+    .gastronomia{
+        background-color: $color-crema;
+        font-family:'Arimo', sans-serif;
+        font-size: 35px;
+        color: $color-verde;
+        text-align: center;
+        padding: 20px;
+    }
+    .gastronomia div{
+        @include flex-around;
+        gap: 20px;
+    }
+    .gastronomiaTamaño{
+        @include medidas-imagenes (350px, 250px, 5px); 
+    }    
+    .hospedaje{
+        background-color: $color-gris;
+        font-family:'Arimo', sans-serif;
+        font-size: 35px;
+        color: $color-verde;
+        text-align: center;
+        padding: 20px;
+    }
+    .hospedaje div{
+        @include flex-around;
+        gap: 20px;
+    }    
+    .hospedajeTamaño{
+        @include medidas-imagenes (350px, 250px, 5px); 
+    }
+    .salud{
+        background-color: $color-crema;
+        font-family:'Arimo', sans-serif;
+        font-size: 35px;
+        color: $color-verde;
+        text-align: center;
+        padding: 20px;
+    }    
+    .salud div{
+        @include flex-around;
+        gap: 20px;
+    }
+    .saludTamaño{
+        @include medidas-imagenes (350px, 250px, 5px); 
+    }    
+}
+
+/*CONTACTO*/
+main{
+    .informes{
+        background-color: $color-crema;
+        @include textos;
+        font-size: 17px;
+        line-height: 1.5;
+        padding: 30px;
+    }    
+    .informes h1{
+        font-size: 50px;
+        color: $color-verde;
+    }    
+    .contenedor-informacion{
+        background-color: $color-gris;
+        font-family: 'Arimo', sans-serif;
+        font-size: 17px;
+        line-height: 1.5;
+        @include flex-around;
+        gap: 20px;
+    }
+    .recuadro-1{
+        background-color: gainsboro;
+        padding: 20px;
+        box-sizing: content-box;
+        width: 300px; 
+        border: 3px black;
+        border-radius: 3px;
+        border-style: solid;
+    }    
+    .recuadro-2{
+        background-color: gainsboro;
+        padding: 20px;
+        box-sizing: content-box;
+        width: 300px; 
+        border: 3px black;
+        border-radius: 3px;
+        border-style: solid;
+    }    
+    .fotosColage{
+        background-color: $color-crema;
+        padding: 30px;
+        gap: 5px;
+    }    
+    .fotosColage div{
+        @include flex-around;
+        gap: 20px;
+    }    
+    .fotosColage div img{
+        height: 400px;
+        width: 300px;
+    }    
+    .contactanos{
+        padding: 30px;
+        gap: 50px;
+        @include grid-center;
+        grid-template-columns: auto auto;
+        grid-template-rows: 0.3fr 1fr;
+        grid-template-areas: "titulo form"
+                             "ubicacion form";
+        justify-content: center;
+    }    
+    .titulo{
+        font-family:'Arimo', sans-serif;
+        font-size: 17px;
+        line-height: 1;
+        grid-area: titulo;
+        justify-self: start;
+        align-self: start;
+    }    
+    .form{
+        grid-area: form;
+        padding: 20px;
+        background-color: #e9eaf1;
+        border-radius: 3px;
+        text-align: center;
+    }    
+    .field{
+        background-color: rgb(254, 254, 254);
+        padding: 15px;
+        width: 350px;
+        margin: 7px;
+        border: solid 2px #ffffff;
+        color: #f2f2f8;
+    }    
+    .fieldConsulta{
+        background-color: rgb(254, 254, 254);
+        padding: 15px;
+        width: 350px;
+        margin: 7px;
+        border: solid 2px white;
+        color: #f2f2f8;
+        height: 80px;
+    }    
+    .ubicacion{
+        grid-area: ubicacion;
+        padding: 10px;
+        justify-self: start;
+        align-self: start;
+    }    
+    .ubicacion img{
+        width: 100%;
+    }
+}
+
+/* MEDIA QUERIES */
+@media (min-width:0px) and (max-width:480px) {
+
+/* INICIO */
+    main{
+        .informacionIcon{
+            margin: 30px;
+            gap: 10px;
+            @include flex-center;
+            flex-flow: column wrap;
+        }    
+        .noticia-1{
+            @include medidas-noticia-responsive (350px, 70px);
+            grid-area: noticia-1;
+        }        
+        .noticia-2{
+            @include medidas-noticia-responsive (350px, 70px);
+            grid-area: noticia-2;
+        }        
+        .noticia-3{
+            @include medidas-noticia-responsive (350px, 70px);
+            grid-area: noticia-3;
+        }        
+        .noticia-4{
+            @include medidas-noticia-responsive (350px, 70px);
+            grid-area: noticia-4;
+        }        
+        .noticia-5{
+            @include medidas-noticia-responsive (350px, 70px);
+            grid-area: noticia-5;
+        }        
+        .noticia-6{
+            @include medidas-noticia-responsive (350px, 70px);
+            grid-area: noticia-6;
+        }
+    }
+/*INFORMACION*/        
+    main{
+        .preguntasFrecuentes{
+            padding: 20px;
+        }    
+        .preguntasFrecuentes button{
+            font-family:'Arimo', sans-serif;
+            font-size: 7px;
+            width: 100%;
+        }
+    }
+/*CONTACTO*/
+main{
+    .fotosColage div img{
+        height: 250px;
+        width: 200px;
+    }
+    .contactanos{
+        @include grid-center;
+        grid-template-columns: 5fr;
+        grid-template-rows: 1fr 4fr fr;
+        grid-template-areas: "titulo"
+                             "ubicacion"
+                             "form";
+    }
+    .titulo{
+        grid-area: titulo;
+        text-align: center;
+        justify-self: center;
+        align-self: center;
+    }
+    .ubicacion{
+        grid-area: ubicacion;
+        justify-self: center;
+        align-self: center;
+    }  
+    .form{
+        grid-area: form;
+        padding: 20px;
+        background-color: #e9eaf1;
+        border-radius: 3px;
+        text-align: center;
+        justify-self: center;
+        align-self: center;
+    }
+    .field{
+        padding: 15px;
+        width: 200px;
+    }
+    .fieldConsulta{
+        padding: 15px;
+        width: 200px;
+        margin: 7px;
+        height: 80px;
+    }
+    .ubicacion img{
+        width: 80%;
+    }   
+}
+/*Footer*/
+footer{
+    .footer{
+        background-color: gainsboro ;
+        padding: 10px;
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: space-evenly;
+        align-items: center;   
+    }    
+    .footer div img{
+        height: 40px;
+    }    
+    .footerInfo{
+        font-family: 'Arimo', sans-serif; 
+        font-size: 10px; 
+    }    
+    .footerDerechos{
+        background-color: #E9E8E5;
+        padding: 10px;
+    }    
+    .footerDerechos div h4{
+        font-family: 'Arimo', sans-serif;
+        line-height: 1;
+        font-size: 10px;
+        text-align: center;
+    }
+    }
+}
+    
+@media (min-width:481px) and (max-width:991px){
+    /*INFORMACION*/  
+main{
+    .preguntasFrecuentes{
+        padding: 15px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-content: center;
+    }    
+    .preguntasFrecuentes button{
+        font-family:'Arimo', sans-serif;
+        font-size: 10px;
+        width: 100%;
+        @include flex-center;
+    }
+    .contactanos{
+        @include grid-center;
+        grid-template-columns: 5fr;
+        grid-template-rows: 1fr 4fr fr;
+        grid-template-areas: "titulo"
+                             "ubicacion"
+                             "form";
+    }
+    .titulo{
+        grid-area: titulo;
+        text-align: center;
+        justify-self: center;
+        align-self: center;
+    }    
+    .ubicacion{
+        grid-area: ubicacion;
+        justify-self: center;
+        align-self: center;
+    }
+    .form{
+        grid-area: form;
+        padding: 20px;
+        background-color: #e9eaf1;
+        border-radius: 3px;
+        text-align: center;
+        justify-self: center;
+        align-self: center;
+    }
+    .field{
+        padding: 15px;
+        width: 250px;
+    }
+    .fieldConsulta{
+        padding: 15px;
+        width: 250px;
+        margin: 7px;
+        height: 80px;
+    }    
+    }
+}
