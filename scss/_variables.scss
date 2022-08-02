@@ -2,36 +2,3 @@ $color-verde: #1f5b37;
 $color-crema: #EEEDEA;
 $color-gris: #E9E8E5;
 $color-naranja: #f49c13;
-
-@mixin textos{
-    font-family: 'Arimo', sans-serif;
-    text-align: justify;
-}
-@mixin flex-around{
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: space-around;
-}
-
-@mixin flex-center{
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: center;
-    align-content: center;
-}
-
-@mixin medidas-imagenes($width, $height, $padding){
-    width: 350px;    
-    height: 250px;
-    padding: 5px;
-}
-
-@mixin medidas-noticia-responsive($width, $height){
-    width: 300px;    
-    height: 70px;
-}
-
-@mixin medidas-noticia($width, $height){
-    width: 500px;    
-    height: 110px;
-}

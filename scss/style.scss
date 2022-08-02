@@ -1,4 +1,7 @@
 @import "scss/variables";
+@import "scss/mixin";
+@import "scss/listas";
+
 *{
     margin: 0px;
     padding: 0px;
@@ -8,7 +11,7 @@
 /*ENCABEZADO*/
 
 header{
-    background-color: #dcdcdc;
+    background-color: nth($list: $colores, $n2 );
     display: flex;
     align-items: center;
     justify-content: space-around;    
@@ -18,7 +21,7 @@ header{
 /*FOOTER*/
 footer{
     .footer{
-    background-color: gainsboro ;
+    background-color: nth($list: $colores, $n1 ) ;
     padding: 15px;
     display: flex;
     flex-flow: row wrap;
@@ -112,7 +115,9 @@ main{
     }
     .madre-contenedor{
         padding: 20px;
-        @include grid-center;
+        display: grid;
+        justify-items: center;
+        align-items: center;
         grid-template-columns: 1fr 1fr;
         grid-template-rows: 1fr 1fr 1fr;
         grid-template-areas: "noticia-1 noticia-2"
@@ -174,17 +179,13 @@ main{
         line-height: 1.5;
         padding: 30px;
     }    
-    .frecuentes h2{
+    .frecuentes h1{
         color: $color-verde;
         font-size: 35px;
         text-align: center;
-    }
-    .frecuentes p{
-        text-align: center;
-        background-color: er;
-    }   
+    }  
     .preguntasFrecuentes{
-        padding: 50px;
+        padding: 20px;
         background-color: gainsboro;
         @include flex-center;
         flex-direction: column;
@@ -194,17 +195,13 @@ main{
         font-size: 17px;
         color: black;
         background-color: $color-naranja;
-        width: 100%;
+        width: 80%;
         @include flex-center;
         align-items: center;
     }
-    .preguntasMenu{
-        text-align: justify;
-    }    
     .mapas{
         background-color: $color-gris;
         padding: 20px;
-    
     }    
     .mapas h4{
         font-size: 35px;
@@ -228,12 +225,17 @@ main{
 
 /*ACTIVIDADES*/
 main{
-    .hacer p{
+    .hacer{
         background-color: $color-gris;
         padding: 20px;
         @include textos;
+        font-size: 17px;
         line-height: 1.5;
-        font-size: 17px; 
+    }
+    .hacer h1{
+        text-align: center;
+        color: $color-verde;
+        font-size: 35px;
     }
     .trekking{
         background-color: $color-gris;
@@ -329,7 +331,9 @@ MAIN{
     }
     .autoguiadas{
         background-color: $color-crema;   
-        @include grid-center;
+        display: grid;
+        justify-items: center;
+        align-items: center;
         grid-template-columns: auto auto;
         grid-template-rows: 2fr 2fr 2fr;
         grid-template-areas: "imagen1 texto1 "
@@ -446,6 +450,11 @@ MAIN{
         line-height: 1.5;
         padding: 30px;
     }
+    .disfrutar h1{
+        text-align: center;
+        color: $color-verde;
+        font-size: 35px;
+    }
     .distrutarImagen{
         background-color: $color-gris;
         height: 430px;
@@ -508,10 +517,12 @@ main{
         padding: 30px;
     }    
     .informes h1{
-        font-size: 50px;
+        text-align: center;
         color: $color-verde;
+        font-size: 35px;
     }    
     .contenedor-informacion{
+        padding: 30px;
         background-color: $color-gris;
         font-family: 'Arimo', sans-serif;
         font-size: 17px;
@@ -553,7 +564,9 @@ main{
     .contactanos{
         padding: 30px;
         gap: 50px;
-        @include grid-center;
+        display: grid;
+        justify-items: center;
+        align-items: center;
         grid-template-columns: auto auto;
         grid-template-rows: 0.3fr 1fr;
         grid-template-areas: "titulo form"
@@ -657,7 +670,9 @@ main{
         width: 200px;
     }
     .contactanos{
-        @include grid-center;
+        display: grid;
+        justify-items: center;
+        align-items: center;
         grid-template-columns: 5fr;
         grid-template-rows: 1fr 4fr fr;
         grid-template-areas: "titulo"
@@ -745,7 +760,9 @@ main{
         @include flex-center;
     }
     .contactanos{
-        @include grid-center;
+        display: grid;
+        justify-items: center;
+        align-items: center;
         grid-template-columns: 5fr;
         grid-template-rows: 1fr 4fr fr;
         grid-template-areas: "titulo"

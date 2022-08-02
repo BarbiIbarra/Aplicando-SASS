@@ -110,13 +110,12 @@ main .noticia {
 
 main .madre-contenedor {
   padding: 20px;
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: 1fr 1fr 1fr;
-  grid-template-areas: "noticia-1 noticia-2"
- "noticia-3 noticia-4"
- "noticia-5 noticia-6";
+  display: grid;
   justify-items: center;
   align-items: center;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  grid-template-areas: "noticia-1 noticia-2" "noticia-3 noticia-4" "noticia-5 noticia-6";
   display: flex;
   flex-flow: row wrap;
   justify-content: center;
@@ -129,7 +128,7 @@ main .noticia-1 {
   grid-area: noticia-1; }
 
 main .noticia-1:hover {
-  transform: scale(1.05); }
+  transform: scale(1.03); }
 
 main .noticia-2 {
   width: 500px;
@@ -137,7 +136,7 @@ main .noticia-2 {
   grid-area: noticia-2; }
 
 main .noticia-2:hover {
-  transform: scale(1.05); }
+  transform: scale(1.03); }
 
 main .noticia-3 {
   width: 500px;
@@ -145,7 +144,7 @@ main .noticia-3 {
   grid-area: noticia-3; }
 
 main .noticia-3:hover {
-  transform: scale(1.05); }
+  transform: scale(1.03); }
 
 main .noticia-4 {
   width: 500px;
@@ -153,7 +152,7 @@ main .noticia-4 {
   grid-area: noticia-4; }
 
 main .noticia-4:hover {
-  transform: scale(1.05); }
+  transform: scale(1.03); }
 
 main .noticia-5 {
   width: 500px;
@@ -161,7 +160,7 @@ main .noticia-5 {
   grid-area: noticia-5; }
 
 main .noticia-5:hover {
-  transform: scale(1.05); }
+  transform: scale(1.03); }
 
 main .noticia-6 {
   width: 500px;
@@ -169,7 +168,7 @@ main .noticia-6 {
   grid-area: noticia-6; }
 
 main .noticia-6:hover {
-  transform: scale(1.05); }
+  transform: scale(1.03); }
 
 /*INFORMACION*/
 main .frecuentes {
@@ -180,15 +179,14 @@ main .frecuentes {
   line-height: 1.5;
   padding: 30px; }
 
-main .frecuentes h2 {
+main .frecuentes h1 {
   color: #1f5b37;
   font-size: 35px;
   text-align: center; }
 
 main .preguntasFrecuentes {
-  padding: 50px 100px;
+  padding: 20px;
   background-color: gainsboro;
-  gap: 20px;
   display: flex;
   flex-flow: row wrap;
   justify-content: center;
@@ -200,15 +198,12 @@ main .preguntasFrecuentes button {
   font-size: 17px;
   color: black;
   background-color: #f49c13;
-  width: 100%;
+  width: 80%;
   display: flex;
   flex-flow: row wrap;
   justify-content: center;
   align-content: center;
   align-items: center; }
-
-main .preguntasMenu {
-  text-align: justify; }
 
 main .mapas {
   background-color: #E9E8E5;
@@ -233,13 +228,18 @@ main .mapasTamaño {
   width: 250px; }
 
 /*ACTIVIDADES*/
-main .hacer p {
+main .hacer {
   background-color: #E9E8E5;
   padding: 20px;
   font-family: 'Arimo', sans-serif;
   text-align: justify;
-  line-height: 1.5;
-  font-size: 17px; }
+  font-size: 17px;
+  line-height: 1.5; }
+
+main .hacer h1 {
+  text-align: center;
+  color: #1f5b37;
+  font-size: 35px; }
 
 main .trekking {
   background-color: #E9E8E5;
@@ -345,13 +345,11 @@ MAIN .caminataAuto {
 MAIN .autoguiadas {
   background-color: #EEEDEA;
   display: grid;
+  justify-items: center;
+  align-items: center;
   grid-template-columns: auto auto;
   grid-template-rows: 2fr 2fr 2fr;
-  grid-template-areas: "imagen1 texto1 "
- "imagen2 imagen3"
- "texto2 imagen4";
-  justify-items: center;
-  align-items: center; }
+  grid-template-areas: "imagen1 texto1 " "imagen2 imagen3" "texto2 imagen4"; }
 
 MAIN .imagen1 {
   grid-area: imagen1;
@@ -449,6 +447,11 @@ MAIN .disfrutar {
   line-height: 1.5;
   padding: 30px; }
 
+MAIN .disfrutar h1 {
+  text-align: center;
+  color: #1f5b37;
+  font-size: 35px; }
+
 MAIN .distrutarImagen {
   background-color: #E9E8E5;
   height: 430px;
@@ -521,10 +524,12 @@ main .informes {
   padding: 30px; }
 
 main .informes h1 {
-  font-size: 50px;
-  color: #1f5b37; }
+  text-align: center;
+  color: #1f5b37;
+  font-size: 35px; }
 
 main .contenedor-informacion {
+  padding: 30px;
   background-color: #E9E8E5;
   font-family: 'Arimo', sans-serif;
   font-size: 17px;
@@ -571,12 +576,11 @@ main .contactanos {
   padding: 30px;
   gap: 50px;
   display: grid;
+  justify-items: center;
+  align-items: center;
   grid-template-columns: auto auto;
   grid-template-rows: 0.3fr 1fr;
-  grid-template-areas: "titulo form"
- "ubicacion form";
-  justify-items: center;
-  align-content: center;
+  grid-template-areas: "titulo form" "ubicacion form";
   justify-content: center; }
 
 main .titulo {
@@ -668,13 +672,11 @@ main .ubicacion img {
     width: 200px; }
   main .contactanos {
     display: grid;
+    justify-items: center;
+    align-items: center;
     grid-template-columns: 5fr;
     grid-template-rows: 1fr 4fr fr;
-    grid-template-areas: "titulo"
- "ubicacion"
- "form";
-    justify-items: center;
-    align-items: center; }
+    grid-template-areas: "titulo" "ubicacion" "form"; }
   main .titulo {
     grid-area: titulo;
     text-align: center;
@@ -737,18 +739,16 @@ main .ubicacion img {
     font-size: 10px;
     width: 100%;
     display: flex;
+    flex-flow: row wrap;
     justify-content: center;
-    align-items: center;
     align-content: center; }
   main .contactanos {
     display: grid;
+    justify-items: center;
+    align-items: center;
     grid-template-columns: 5fr;
     grid-template-rows: 1fr 4fr fr;
-    grid-template-areas: "titulo"
- "ubicacion"
- "form";
-    justify-items: center;
-    align-items: center; }
+    grid-template-areas: "titulo" "ubicacion" "form"; }
   main .titulo {
     grid-area: titulo;
     text-align: center;
