@@ -1,4 +1,15 @@
 @charset "UTF-8";
+main .frecuentes h1, main .hacer h1, MAIN .caminataAuto, MAIN .disfrutar h1, main .informes h1 {
+  text-align: center;
+  color: #1f5b37;
+  font-size: 35px;
+  font-family: 'Arimo', sans-serif; }
+
+main .mapas h4, main .trekking, main .excursiones, main .automovil, MAIN .gastronomia, MAIN .hospedaje, MAIN .salud {
+  font-family: 'Arimo', sans-serif;
+  text-align: center;
+  padding: 20px; }
+
 * {
   margin: 0px;
   padding: 0px;
@@ -6,7 +17,7 @@
 
 /*ENCABEZADO*/
 header {
-  background-color: #dcdcdc;
+  background-color: gainsboro;
   display: flex;
   align-items: center;
   justify-content: space-around;
@@ -14,7 +25,7 @@ header {
 
 /*FOOTER*/
 footer .footer {
-  background-color: gainsboro;
+  background-color: #dcdcdc;
   padding: 15px;
   display: flex;
   flex-flow: row wrap;
@@ -57,7 +68,8 @@ main .bienvenido {
 main .bienvenido h1 {
   font-family: 'Arimo', sans-serif;
   color: #1f5b37;
-  font-size: 50px; }
+  font-size: 50px;
+  text-align: center; }
 
 main .noticia h2 {
   font-family: 'Arimo', sans-serif;
@@ -97,7 +109,7 @@ main .informacionIcon img {
 
 main .informacionIcon img:hover {
   transform: scale(1.3);
-  background-color: gainsboro;
+  background-color: #dcdcdc;
   padding: 18px;
   border-radius: 30px; }
 
@@ -179,14 +191,9 @@ main .frecuentes {
   line-height: 1.5;
   padding: 30px; }
 
-main .frecuentes h1 {
-  color: #1f5b37;
-  font-size: 35px;
-  text-align: center; }
-
 main .preguntasFrecuentes {
   padding: 20px;
-  background-color: gainsboro;
+  background-color: #dcdcdc;
   display: flex;
   flex-flow: row wrap;
   justify-content: center;
@@ -207,14 +214,11 @@ main .preguntasFrecuentes button {
 
 main .mapas {
   background-color: #E9E8E5;
-  padding: 20px; }
+  padding: 20px;
+  font-size: 35px; }
 
 main .mapas h4 {
-  font-size: 35px;
-  color: #1f5b37;
-  padding: 10px;
-  font-family: 'Arimo', sans-serif;
-  text-align: center; }
+  color: #1f5b37; }
 
 main .mapas div {
   padding: 10px;
@@ -236,17 +240,8 @@ main .hacer {
   font-size: 17px;
   line-height: 1.5; }
 
-main .hacer h1 {
-  text-align: center;
-  color: #1f5b37;
-  font-size: 35px; }
-
 main .trekking {
-  background-color: #E9E8E5;
-  font-family: 'Arimo', sans-serif;
-  font-size: 17px;
-  text-align: center;
-  padding: 20px; }
+  background-color: #E9E8E5; }
 
 main .trekking h4 {
   font-size: 35px;
@@ -283,18 +278,14 @@ main .botonCaminatas a {
   display: flex; }
 
 main .botonCaminatas:hover {
-  background-color: gainsboro;
+  background-color: #dcdcdc;
   font-weight: 600; }
 
 main .botonCaminatas a:hover {
   color: #1f5b37; }
 
 main .excursiones {
-  background-color: #EEEDEA;
-  font-family: 'Arimo', sans-serif;
-  font-size: 17px;
-  text-align: center;
-  padding: 20px; }
+  background-color: #EEEDEA; }
 
 main .excursiones h4 {
   font-size: 35px;
@@ -312,11 +303,7 @@ main .excursionesTamaño {
   padding: 5px; }
 
 main .automovil {
-  background-color: #E9E8E5;
-  font-family: 'Arimo', sans-serif;
-  font-size: 17px;
-  text-align: center;
-  padding: 20px; }
+  background-color: #E9E8E5; }
 
 main .automovil h4 {
   font-size: 35px;
@@ -336,11 +323,7 @@ main .automovilTamaño {
 /*ACTIVIDADES-CAMINATAS*/
 MAIN .caminataAuto {
   background-color: #EEEDEA;
-  font-family: 'Arimo', sans-serif;
-  font-size: 25px;
-  color: #1f5b37;
-  padding: 30px;
-  text-align: center; }
+  padding: 30px; }
 
 MAIN .autoguiadas {
   background-color: #EEEDEA;
@@ -447,11 +430,6 @@ MAIN .disfrutar {
   line-height: 1.5;
   padding: 30px; }
 
-MAIN .disfrutar h1 {
-  text-align: center;
-  color: #1f5b37;
-  font-size: 35px; }
-
 MAIN .distrutarImagen {
   background-color: #E9E8E5;
   height: 430px;
@@ -459,11 +437,11 @@ MAIN .distrutarImagen {
 
 MAIN .gastronomia {
   background-color: #EEEDEA;
-  font-family: 'Arimo', sans-serif;
+  color: #1f5b37; }
+
+MAIN .gastronomia h4 {
   font-size: 35px;
-  color: #1f5b37;
-  text-align: center;
-  padding: 20px; }
+  color: #1f5b37; }
 
 MAIN .gastronomia div {
   display: flex;
@@ -478,11 +456,11 @@ MAIN .gastronomiaTamaño {
 
 MAIN .hospedaje {
   background-color: #E9E8E5;
-  font-family: 'Arimo', sans-serif;
+  color: #1f5b37; }
+
+MAIN .hospedaje h4 {
   font-size: 35px;
-  color: #1f5b37;
-  text-align: center;
-  padding: 20px; }
+  color: #1f5b37; }
 
 MAIN .hospedaje div {
   display: flex;
@@ -497,11 +475,11 @@ MAIN .hospedajeTamaño {
 
 MAIN .salud {
   background-color: #EEEDEA;
-  font-family: 'Arimo', sans-serif;
+  color: #1f5b37; }
+
+MAIN .salud h4 {
   font-size: 35px;
-  color: #1f5b37;
-  text-align: center;
-  padding: 20px; }
+  color: #1f5b37; }
 
 MAIN .salud div {
   display: flex;
@@ -523,11 +501,6 @@ main .informes {
   line-height: 1.5;
   padding: 30px; }
 
-main .informes h1 {
-  text-align: center;
-  color: #1f5b37;
-  font-size: 35px; }
-
 main .contenedor-informacion {
   padding: 30px;
   background-color: #E9E8E5;
@@ -540,7 +513,7 @@ main .contenedor-informacion {
   gap: 20px; }
 
 main .recuadro-1 {
-  background-color: gainsboro;
+  background-color: #dcdcdc;
   padding: 20px;
   box-sizing: content-box;
   width: 300px;
@@ -549,7 +522,7 @@ main .recuadro-1 {
   border-style: solid; }
 
 main .recuadro-2 {
-  background-color: gainsboro;
+  background-color: #dcdcdc;
   padding: 20px;
   box-sizing: content-box;
   width: 300px;
