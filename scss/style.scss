@@ -10,7 +10,6 @@
 }
 
 /*ENCABEZADO*/
-
 header{
     background-color: nth($colores, 1);
     display: flex;
@@ -29,16 +28,13 @@ footer{
     justify-content: space-evenly;
     align-items: center;
     }
-    .footer div img{
-    height: 80px;
-    }
     .footerInfo{
     font-family: 'Arimo', sans-serif; 
-    font-size: 15px; 
+    font-size: 13px; 
     }
     .footerDerechos{
     background-color: $color-gris;
-    padding: 15px;
+    padding: 10px;
     }
     .footerDerechos div h4{
         font-family: 'Arimo', sans-serif;
@@ -47,7 +43,6 @@ footer{
         text-align: center;
     }    
 }
-
 
 /*inicio*/
 main{
@@ -113,7 +108,6 @@ main{
         @include textos;
         line-height: 1.5;
         padding: 30px 50px;
-
     }
     .madre-contenedor{
         padding: 20px;
@@ -129,49 +123,87 @@ main{
         gap: 15px;
     }
     .noticia-1{
-        @include medidas-noticia(500px, 110px);
         grid-area: noticia-1;
+        @include medidas-noticia (500px, 110px);
     }
     .noticia-1:hover{
         transform: scale(1.03);
     }    
     .noticia-2{
-        @include medidas-noticia(500px, 110px);
         grid-area: noticia-2;
+        @include medidas-noticia (500px, 110px);
     }
     .noticia-2:hover{
         transform: scale(1.03);
     }    
     .noticia-3{
-        @include medidas-noticia(500px, 110px);
         grid-area: noticia-3;
+        @include medidas-noticia (500px, 110px);
     }
     .noticia-3:hover{
         transform: scale(1.03);
     }    
     .noticia-4{
-        @include medidas-noticia(500px, 110px);
         grid-area: noticia-4;
+        @include medidas-noticia (500px, 110px);
     }
     .noticia-4:hover{
         transform: scale(1.03);
     }    
     .noticia-5{
-        @include medidas-noticia(500px, 110px);
         grid-area: noticia-5;
+        @include medidas-noticia (500px, 110px);
     }
     .noticia-5:hover{
         transform: scale(1.03);
     }    
     .noticia-6{
-        @include medidas-noticia(500px, 110px);
         grid-area: noticia-6;
+        @include medidas-noticia (500px, 110px);
     }
     .noticia-6:hover{
         transform: scale(1.03);
     }
 }
-
+/*PARQUE NACIONAL*/
+main{
+    .parque{
+        background-color: $color-gris;
+        padding: 20px;
+        @include textos;
+        font-size: 17px;
+        line-height: 1.5;
+    }
+    .parque h1{
+        @extend %titulos;  
+    }
+    .parqueNacional{
+        font-family: 'Arimo', sans-serif;
+        padding: 20px;
+        text-align: left;
+        font-size: 17px;
+        background-color: $color-crema;
+    }
+    .parqueDescripcion{
+        background-color: $color-gris;
+        padding: 20px;
+        @include textos;
+        font-size: 17px;
+        line-height: 1.5;
+    }
+    .parqueDescripcion h2{
+        @extend %titulos;  
+    }
+    .parqueDivision{
+        background-color: $color-crema;
+        padding: 20px;
+        @include textos;
+        font-size: 17px;
+    }
+    .parqueDivision h3{
+        @extend %titulos;  
+    }
+}
 /*INFORMACION*/
 main{
     .frecuentes{
@@ -215,10 +247,6 @@ main{
         flex-flow: row wrap;
         justify-content: space-evenly;
     }    
-    .mapasTamaño{
-        height: 300px;
-        width: 250px;
-    }    
 }
 
 /*ACTIVIDADES*/
@@ -244,9 +272,6 @@ main{
     .trekking div{
         @include flex-around;
         gap: 20px;
-    }
-    .trekkingTamaño{
-        @include medidas-imagenes (350px, 250px, 5px); 
     }
     .botonCaminatas{
         background-color: $color-verde;
@@ -286,9 +311,6 @@ main{
         @include flex-around;
         gap: 20px;
     }
-    .excursionesTamaño{
-        @include medidas-imagenes (350px, 250px, 5px); 
-    }
     .automovil{
         background-color: $color-gris;
         @extend %subTitulos;
@@ -301,11 +323,7 @@ main{
         @include flex-around;
         gap: 20px;
     }
-    .automovilTamaño{
-        @include medidas-imagenes (350px, 250px, 5px); 
-    }  
 }
-
 /*ACTIVIDADES-CAMINATAS*/
 MAIN{
     .caminataAuto{
@@ -454,10 +472,7 @@ MAIN{
     .gastronomia div{
         @include flex-around;
         gap: 20px;
-    }
-    .gastronomiaTamaño{
-        @include medidas-imagenes (350px, 250px, 5px); 
-    }    
+    } 
     .hospedaje{
         background-color: $color-gris;
         color: $color-verde;
@@ -471,9 +486,6 @@ MAIN{
         @include flex-around;
         gap: 20px;
     }    
-    .hospedajeTamaño{
-        @include medidas-imagenes (350px, 250px, 5px); 
-    }
     .salud{
         background-color: $color-crema;
         color: $color-verde;
@@ -487,11 +499,7 @@ MAIN{
         @include flex-around;
         gap: 20px;
     }
-    .saludTamaño{
-        @include medidas-imagenes (350px, 250px, 5px); 
-    }    
 }
-
 /*CONTACTO*/
 main{
     .informes{
@@ -539,10 +547,6 @@ main{
     .fotosColage div{
         @include flex-around;
         gap: 20px;
-    }    
-    .fotosColage div img{
-        height: 400px;
-        width: 300px;
     }    
     .contactanos{
         padding: 30px;
@@ -705,9 +709,6 @@ footer{
         flex-flow: row wrap;
         justify-content: space-evenly;
         align-items: center;   
-    }    
-    .footer div img{
-        height: 40px;
     }    
     .footerInfo{
         font-family: 'Arimo', sans-serif; 

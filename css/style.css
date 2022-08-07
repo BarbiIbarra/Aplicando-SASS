@@ -1,5 +1,4 @@
-@charset "UTF-8";
-main .frecuentes h1, main .hacer h1, MAIN .caminataAuto, MAIN .disfrutar h1, main .informes h1 {
+main .parque h1, main .parqueDescripcion h2, main .parqueDivision h3, main .frecuentes h1, main .hacer h1, MAIN .caminataAuto, MAIN .disfrutar h1, main .informes h1 {
   text-align: center;
   color: #1f5b37;
   font-size: 35px;
@@ -32,16 +31,13 @@ footer .footer {
   justify-content: space-evenly;
   align-items: center; }
 
-footer .footer div img {
-  height: 80px; }
-
 footer .footerInfo {
   font-family: 'Arimo', sans-serif;
-  font-size: 15px; }
+  font-size: 13px; }
 
 footer .footerDerechos {
   background-color: #E9E8E5;
-  padding: 15px; }
+  padding: 10px; }
 
 footer .footerDerechos div h4 {
   font-family: 'Arimo', sans-serif;
@@ -135,52 +131,83 @@ main .madre-contenedor {
   gap: 15px; }
 
 main .noticia-1 {
+  grid-area: noticia-1;
   width: 500px;
-  height: 110px;
-  grid-area: noticia-1; }
+  height: 110px; }
 
 main .noticia-1:hover {
   transform: scale(1.03); }
 
 main .noticia-2 {
+  grid-area: noticia-2;
   width: 500px;
-  height: 110px;
-  grid-area: noticia-2; }
+  height: 110px; }
 
 main .noticia-2:hover {
   transform: scale(1.03); }
 
 main .noticia-3 {
+  grid-area: noticia-3;
   width: 500px;
-  height: 110px;
-  grid-area: noticia-3; }
+  height: 110px; }
 
 main .noticia-3:hover {
   transform: scale(1.03); }
 
 main .noticia-4 {
+  grid-area: noticia-4;
   width: 500px;
-  height: 110px;
-  grid-area: noticia-4; }
+  height: 110px; }
 
 main .noticia-4:hover {
   transform: scale(1.03); }
 
 main .noticia-5 {
+  grid-area: noticia-5;
   width: 500px;
-  height: 110px;
-  grid-area: noticia-5; }
+  height: 110px; }
 
 main .noticia-5:hover {
   transform: scale(1.03); }
 
 main .noticia-6 {
+  grid-area: noticia-6;
   width: 500px;
-  height: 110px;
-  grid-area: noticia-6; }
+  height: 110px; }
 
 main .noticia-6:hover {
   transform: scale(1.03); }
+
+/*PARQUE NACIONAL*/
+main .parque {
+  background-color: #E9E8E5;
+  padding: 20px;
+  font-family: 'Arimo', sans-serif;
+  text-align: justify;
+  font-size: 17px;
+  line-height: 1.5; }
+
+main .parqueNacional {
+  font-family: 'Arimo', sans-serif;
+  padding: 20px;
+  text-align: left;
+  font-size: 17px;
+  background-color: #EEEDEA; }
+
+main .parqueDescripcion {
+  background-color: #E9E8E5;
+  padding: 20px;
+  font-family: 'Arimo', sans-serif;
+  text-align: justify;
+  font-size: 17px;
+  line-height: 1.5; }
+
+main .parqueDivision {
+  background-color: #EEEDEA;
+  padding: 20px;
+  font-family: 'Arimo', sans-serif;
+  text-align: justify;
+  font-size: 17px; }
 
 /*INFORMACION*/
 main .frecuentes {
@@ -227,10 +254,6 @@ main .mapas div {
   flex-flow: row wrap;
   justify-content: space-evenly; }
 
-main .mapasTamaño {
-  height: 300px;
-  width: 250px; }
-
 /*ACTIVIDADES*/
 main .hacer {
   background-color: #E9E8E5;
@@ -252,11 +275,6 @@ main .trekking div {
   flex-flow: row wrap;
   justify-content: space-around;
   gap: 20px; }
-
-main .trekkingTamaño {
-  width: 350px;
-  height: 250px;
-  padding: 5px; }
 
 main .botonCaminatas {
   background-color: #1f5b37;
@@ -297,11 +315,6 @@ main .excursiones div {
   justify-content: space-around;
   gap: 20px; }
 
-main .excursionesTamaño {
-  width: 350px;
-  height: 250px;
-  padding: 5px; }
-
 main .automovil {
   background-color: #E9E8E5; }
 
@@ -314,11 +327,6 @@ main .automovil div {
   flex-flow: row wrap;
   justify-content: space-around;
   gap: 20px; }
-
-main .automovilTamaño {
-  width: 350px;
-  height: 250px;
-  padding: 5px; }
 
 /*ACTIVIDADES-CAMINATAS*/
 MAIN .caminataAuto {
@@ -449,11 +457,6 @@ MAIN .gastronomia div {
   justify-content: space-around;
   gap: 20px; }
 
-MAIN .gastronomiaTamaño {
-  width: 350px;
-  height: 250px;
-  padding: 5px; }
-
 MAIN .hospedaje {
   background-color: #E9E8E5;
   color: #1f5b37; }
@@ -468,11 +471,6 @@ MAIN .hospedaje div {
   justify-content: space-around;
   gap: 20px; }
 
-MAIN .hospedajeTamaño {
-  width: 350px;
-  height: 250px;
-  padding: 5px; }
-
 MAIN .salud {
   background-color: #EEEDEA;
   color: #1f5b37; }
@@ -486,11 +484,6 @@ MAIN .salud div {
   flex-flow: row wrap;
   justify-content: space-around;
   gap: 20px; }
-
-MAIN .saludTamaño {
-  width: 350px;
-  height: 250px;
-  padding: 5px; }
 
 /*CONTACTO*/
 main .informes {
@@ -540,10 +533,6 @@ main .fotosColage div {
   flex-flow: row wrap;
   justify-content: space-around;
   gap: 20px; }
-
-main .fotosColage div img {
-  height: 400px;
-  width: 300px; }
 
 main .contactanos {
   padding: 30px;
@@ -685,8 +674,6 @@ main .ubicacion img {
     flex-flow: row wrap;
     justify-content: space-evenly;
     align-items: center; }
-  footer .footer div img {
-    height: 40px; }
   footer .footerInfo {
     font-family: 'Arimo', sans-serif;
     font-size: 10px; }
