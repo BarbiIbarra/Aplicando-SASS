@@ -67,7 +67,7 @@ main{
         text-align: center;
     }    
     .noticia h2{
-        @include textos;
+        font-family: 'Arimo', sans-serif;
         line-height: 1.5;
         font-size: 35px;
     }      
@@ -78,36 +78,39 @@ main{
     .informacionClick{
         padding: 20px;
         @include flex-around;
-    }    
-    .informacionClick img{
-        height: 250px;
-        width: 350px;
-        gap: 20px;
-        margin: 30px;
-    }    
-    .informacionClick img:hover{
-        transform: scale(1.1);
-    }    
+        img{
+            height: 250px;
+            width: 350px;
+            gap: 20px;
+            margin: 30px;
+            &:hover{
+        transform: scale(1.1);                
+            }
+        }
+    } 
     .informacionIcon{
         padding: 20px;
         margin: 10px;
         @include flex-around;
-    }    
-    .informacionIcon img{
-        width: 130px;
-        gap: 50px;
-    }    
-    .informacionIcon img:hover{
-        transform: scale(1.3);
-        background-color: nth($colores, 2);
-        padding: 18px;
-        border-radius: 30px;    
-    }    
+        img{
+            width: 130px;
+            gap: 50px;
+            &:hover{
+                transform: scale(1.3);
+                background-color: nth($colores, 2);
+                padding: 18px;
+                border-radius: 30px; 
+            }
+        }
+    }      
     .noticia{
         background-color: $color-gris;
-        @include textos;
         line-height: 1.5;
         padding: 30px 50px;
+    }
+    .noticia h2{
+        color: $color-verde;
+        @extend %subTitulos;
     }
     .madre-contenedor{
         padding: 20px;
@@ -125,46 +128,46 @@ main{
     .noticia-1{
         grid-area: noticia-1;
         @include medidas-noticia (500px, 110px);
-    }
-    .noticia-1:hover{
-        transform: scale(1.03);
-    }    
+        &:hover{
+        transform: scale(1.03);            
+        }
+    } 
     .noticia-2{
         grid-area: noticia-2;
         @include medidas-noticia (500px, 110px);
+        &:hover{
+            transform: scale(1.03);            
+            }
     }
-    .noticia-2:hover{
-        transform: scale(1.03);
-    }    
     .noticia-3{
         grid-area: noticia-3;
         @include medidas-noticia (500px, 110px);
+        &:hover{
+            transform: scale(1.03);            
+            }
     }
-    .noticia-3:hover{
-        transform: scale(1.03);
-    }    
     .noticia-4{
         grid-area: noticia-4;
         @include medidas-noticia (500px, 110px);
+        &:hover{
+            transform: scale(1.03);            
+            }
     }
-    .noticia-4:hover{
-        transform: scale(1.03);
-    }    
     .noticia-5{
         grid-area: noticia-5;
         @include medidas-noticia (500px, 110px);
+        &:hover{
+            transform: scale(1.03);            
+            }
     }
-    .noticia-5:hover{
-        transform: scale(1.03);
-    }    
     .noticia-6{
         grid-area: noticia-6;
         @include medidas-noticia (500px, 110px);
+        &:hover{
+            transform: scale(1.03);            
+            }
     }
-    .noticia-6:hover{
-        transform: scale(1.03);
     }
-}
 /*PARQUE NACIONAL*/
 main{
     .parque{
@@ -707,7 +710,7 @@ footer{
         padding: 10px;
         display: flex;
         flex-flow: row wrap;
-        justify-content: space-evenly;
+        justify-content: center;
         align-items: center;   
     }    
     .footerInfo{
